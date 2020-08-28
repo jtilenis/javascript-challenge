@@ -13,8 +13,8 @@ If the date input field is empty or blank all records will be displayed.
 
 ## UFO Level 2
 This web page is the same as the one described in UFO Level 1. Additional search options were added that allow for the selection of: 
-    * `date/time`
-    * `city`
-    * `state`
-    * `country`
-    * `shape`
+   * `date/time`
+   * `city`
+   * `state`
+   * `country`
+   * `shape`
