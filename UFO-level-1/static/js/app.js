@@ -37,12 +37,15 @@ button.on("click", () => {
         d3.event.preventDefault();
         var inputDate = inputFieldDate.property('value').trim();
         var filterDate = UFO_Data.filter(UFO_Data => UFO_Data.datetime == inputDate);
+        console.log("Selected Date: ", inputDate)
 $tbody.html("")
 
 let response = {
     filterDate
 }
 
+console.log("inputDate length", inputDate.length)
+if(inputDate.length != 0) { 
 if(response.filterDate.length != 0) {
     addData(filterDate);
 }
@@ -50,7 +53,12 @@ if(response.filterDate.length != 0) {
 else {
     $tbody.append("tr").append("td").text("No Sightings Here...Move On...");
 }
-
+}
+else
+{
+    // Display all data if date is empty
+    addData(UFO_Data);  
+}
         
     });
 
